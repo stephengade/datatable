@@ -58,13 +58,7 @@ const VehicleTable = () => {
 
   const DataLength = items.length;
 
-  if (loading) {
-    return (
-      <div className="grid place-items-center mt-[4rem]">
-      <p className="font-graphik self-center">Something good is loading...</p>
-      </div>
-    )
-  }
+
 
   return (
     <section className="mt-5">
