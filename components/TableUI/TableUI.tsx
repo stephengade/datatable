@@ -106,10 +106,11 @@ import {
           {search && (
             <TextField
               onChange={debounce(handleSearchChange, 1000)}
-              size="small"
+              size="string"
               label={searchLabel}
               margin="normal"
-              variant="standard"
+              variant="outlined"
+              fullWidth
             />
           )}
         </Box>
