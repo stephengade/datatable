@@ -7,7 +7,9 @@ const VehiclePage = ({registeredVehicleInfo}: any) => {
     const router = useRouter();
     const { id } = router.query;
 
-  
+  if(!registeredVehicleInfo) {
+    return <p>loading</p>
+  }
   
     return (
         <>
@@ -25,7 +27,7 @@ export default VehiclePage
 export async function getStaticPaths() {
     // Fetch the IDs from the API endpoint
     const response = await axios.get(
-      `https://apistaging.boiibonline.ng/api/VehiclePremiumPolicyHolder/GetByFirmId?FirmId=a9a4c543-f958-4bd0-8e24-41e1d0a111e0&PageNumber=1&PageSize=10`
+      `https://apistaging.boiibonline.ng/api/VehiclePremiumPolicyHolder/GetByFirmId?FirmId=a9a4c543-f958-4bd0-8e24-41e1d0a111e0`
     );
     const items = response.data.Items;
   
@@ -36,7 +38,7 @@ export async function getStaticPaths() {
   
     return {
       paths,
-      fallback: false, // Set to true if you don't want to show a 404 page for non-existing IDs
+      fallback: true, // Set to false if you want to show a 404 page for non-existing IDs
     };
   }
   
@@ -48,6 +50,8 @@ export async function getStaticPaths() {
       `https://apistaging.boiibonline.ng/api/VehiclePremiumPolicyHolder/GetRegVehiclePolicyDetailsById?Id=${id}`
     );
     const registeredVehicleInfo = response.data.RegisteredVehicleInfoModel;
+
+    
   
     return {
       props: {
