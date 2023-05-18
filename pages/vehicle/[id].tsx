@@ -34,7 +34,7 @@ export async function getStaticPaths() {
   
     return {
       paths,
-      fallback: true, // Set to false if you want to show a 404 page for non-existing IDs
+      fallback: false, // Set to true if you don't want to show a 404 page for non-existing IDs
     };
   }
   

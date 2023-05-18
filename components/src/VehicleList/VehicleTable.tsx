@@ -35,6 +35,39 @@ const VehicleTable = () => {
   };
 
 
+  // handleSearch
+
+  // const handleSearch = async (query: string) => {
+  //   const response = await axios.get(
+  //     `https://apistaging.boiibonline.ng/api/VehiclePremiumPolicyHolder/GetByFirmId?FirmId=a9a4c543-f958-4bd0-8e24-41e1d0a111e0&PageNumber=${currentPage}&PageSize=${ITEMS_PER_PAGE}`
+  //   );
+  //   if (query.trim() === "") {
+  //     setItems(response.data.Items);
+  //   } else {
+  //     const filteredData = allUserData?.fetchCustomers.results.filter(
+  //       (item: any) => 
+  //       item.email
+  //       .toLowerCase()
+  //       .includes(query.toLowerCase()) ||
+  //        item.homesilo_user_type
+  //           .toLowerCase()
+  //           .includes(query.toLowerCase()) || 
+  //         item.firstname
+  //           .toLowerCase()
+  //           .includes(query.toLowerCase()) ||
+  //         item.username.toLowerCase().includes(query.toLowerCase()) ||
+  //         item.lastname
+  //           .toLowerCase()
+  //           .includes(query.toLowerCase()) || item._id
+  //           .toLowerCase()
+  //           .includes(query.toLowerCase()) 
+  //     );
+  //     setUserData(filteredData);
+  //   }
+  // };
+
+
+
   const DataLength = items.length;
 
   return (
