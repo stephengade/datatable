@@ -1,7 +1,7 @@
 import { VehicleDetails } from "@/components/src/VehicleDetails/VehicleDetails"
 import axios from "axios";
 import { useRouter } from "next/router";
-import Image from "next/image"
+
 
 const VehiclePage = ({registeredVehicleInfo}: any) => {
     const router = useRouter();
@@ -10,10 +10,12 @@ const VehiclePage = ({registeredVehicleInfo}: any) => {
   
   
     return (
+        <>
         <div className="container px-4 mx-auto max-w-4xl">
         <VehicleDetails id={id} Data={registeredVehicleInfo[0]}/>
        
         </div>
+        </>
     )
 }
 
