@@ -59,8 +59,8 @@ export const VehicleDetails = ({Data}: any) => {
            <p className="mt-1"><span className="font-bold">Registered on:</span> {moment(DateRegistered).format('Do of MMMM, YYYY')}</p>
             <p className="mt-1"><span className="font-bold">Expiry Date:</span> {moment(DateExpired).format('Do of MMMM, YYYY')}</p>  
             <p className="mt-1"><span className="font-bold">Registration No: </span> {RegistrationNo}</p>       
-            <p className="mt-1"><span className="font-bold">Certificate No:</span> {CertificateNo}</p>
-            <p className="mt-1"><span className="font-bold">Chassis No:</span> {ChassisNo}</p>
+            {/* <p className="mt-1"><span className="font-bold">Certificate No:</span> {CertificateNo}</p>
+            <p className="mt-1"><span className="font-bold">Chassis No:</span> {ChassisNo}</p> */}
            </div>
 
            <hr />
